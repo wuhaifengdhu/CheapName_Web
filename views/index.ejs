@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <header>
+        <h1>基于大数据分析的贱名诠释</h1>
+    </header>
+    
+    <div>
+        <img src="img/home.jpg">
+    </div>
+
+    <div class="public_tab_item">
+        <div>
+            <p>在农村，据说给刚出生的孩子起个贱名，孩子容易养活，而且一生都会比较顺利，名字怎么起呢？</p>
+            <p>据说，农村有一本非常古老、神奇的万年历，里面对孩子的名字都作了规定。看看你在农村应该叫什么吧。</p>
+        </div>
+
+        <form class="J_ajaxForm J_testFixedTop" method="post" action="result">
+            <div class="public_form_wrap">
+                <ul>
+                    <li>
+                        <div class="left">
+                            您的姓名
+                        </div>
+                        <div class="auto">
+                            <input type="text" id="username" name="username" placeholder="请输入" value="" />
+                        </div></li>
+                    <li>
+                        <div class="left">
+                            您的性别
+                        </div>
+                        <div>
+                            <label><input name="sex" type="radio" value="0" />男</label>
+                            <label><input name="sex" type="radio" value="1" />女</label>
+                        </div></li>
+                    <li>
+                        <div class="left">
+                            出生日期
+                        </div>
+                        <div>
+                            <input name="birthDay" type="date" min="1990-01-01"><br>
+                        </div></li>
+                </ul>
+            </div>
+            <div class="public_btn_s">
+                <input type="submit">立即测算</input>
+            </div>
+            <div class="test_count J_testFixedShow">
+                已有<span><%= site_count %></span>人测算
+            </div>
+        </form>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="public_footer_servers" style="padding-bottom: 20px;">
+        <p>趣味测试供应商：南洋理工CAP组</p>
+        <p>欢迎大家关注我们的微信公众号：ntucap</p>
+    </footer>
+
+    <script type="text/javascript" src="../name.js"></script>
+</body>
+</html>
