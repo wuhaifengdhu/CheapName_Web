@@ -1,0 +1,36 @@
+.header{
+    text-align: center;
+}
+
+.banner{
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+}
+
+.body_tab{
+    text-align: center;
+}
+
+.result_box{
+    text-align: center;
+}
+
+.funny_img{
+    text-align: center;
+}
+
+.description{
+    text-align: center;
+}
+
+/**
+ * Override feedback icon position
+ * See http://formvalidation.io/examples/adjusting-feedback-icon-position/
+ */
+#eventForm .form-control-feedback {
+    top: 0;
+    right: -15px;
+}

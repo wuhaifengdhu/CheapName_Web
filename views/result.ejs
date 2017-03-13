@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="css/mbz.css">
 </head>
 <body>
-    <div>
+    <div class="result_box">
         <%= name %>在农村的名字是<%= cheap_name%>
     </div>
-    <div>
+    <div class="funny_img">
         <img src="<%= img %>">
     </div>
 
-    <div>
+    <div class="description">
         <p>个人性格分析：</p>
         <p><%= description %></p>
     </div>
+
+    <% include import.ejs %>
 </body>
 </html>
