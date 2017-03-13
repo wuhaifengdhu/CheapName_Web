@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
     <title>显示名字结果</title>
-    <link rel="stylesheet" href="css/mbz.css">
 </head>
 <body>
-    <div class="result_box">
+    <div class="result_box" style="margin : 20px 0px 20px 0px;">
         <%= name %>在农村的名字是<%= cheap_name%>
     </div>
-    <div class="funny_img">
-        <img src="<%= img %>">
+    <div>
+        <img class="funny_img" src="<%= img %>" style="width: 100%; height:100%; vertical-align: middle">
     </div>
 
-    <div class="description">
-        <p>个人性格分析：</p>
-        <p><%= description %></p>
+    <div class="description" style="margin: 20px 0px 0px 0px">
+        <p style="text-align: left">个人性格分析：</p>
+        <p style="text-align: left;"><%= description %></p>
     </div>
 
     <% include import.ejs %>
