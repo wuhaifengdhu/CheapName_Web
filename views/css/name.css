@@ -9,6 +9,7 @@ body {
     min-height: 670px;
     max-height: 780px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 html {
