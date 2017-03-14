@@ -6,27 +6,28 @@
     <title>基于大数据分析的贱名诠释</title>
 </head>
 <body ontouchstart>
-
+    <div class="border"></div>
     <header class="header">
         <p>基于大数据分析的贱名诠释</p>
     </header>
 
-    <div>
-        <p>在农村，据说给刚出生的孩子起个贱名，孩子容易养活，而且一生都会比较顺利，名字怎么起呢？</p>
-        <p>据说，农村有一本非常古老、神奇的万年历，里面对孩子的名字都作了规定。看看你在农村应该叫什么吧。</p>
+    <div class="bar"></div>
+    <img class="img-box" src="img/home.jpg">
+
+    <div class="story">
+        <p>在农村，据说给刚出生的孩子起个贱名，孩子容易养活，而且一生都会比较顺利，名字怎么起呢？<br>
+        据说，农村有一本非常古老、神奇的万年历，里面对孩子的名字都作了规定。看看你在农村应该叫什么吧。</p>
     </div>
 
-    <img src="img/home.jpg" style="width: 100%; height:100%; vertical-align: middle">
-
-    <div class="body_tab" style="border-style: solid; border-width: 1px 1px;margin : 10px 0px 20px 0px;padding: 10px 0px 0px 0px;}">
+    <div class="body_tab">
 
         <form id="eventForm" method="post" action="result" class="form-horizontal">
-            <div class="form-group">
-                <label class="col-xs-3 control-label">您的姓名</label>
-                <div class="col-xs-5">
-                    <input type="text" class="form-control" name="username" />
-                </div>
-            </div>
+            <!--<div class="form-group">-->
+                <!--<label class="col-xs-3 control-label">您的姓名</label>-->
+                <!--<div class="col-xs-5">-->
+                    <!--<input type="text" class="form-control" name="username" />-->
+                <!--</div>-->
+            <!--</div>-->
 
             <div class="form-group">
                 <label class="col-xs-3 control-label">您的性别</label>
@@ -51,7 +52,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="submit">
                 <button type="submit" class="btn btn-primary">立即测算</button>
                 <div>
                     已有<span><%= site_count %></span>人测算
@@ -61,11 +62,11 @@
     </div>
 
     <!-- 底部 -->
-    <footer class="footer" style="padding-bottom: 20px;">
-        <p>趣味测试供应商：南洋理工CAP组</p>
-        <p>欢迎大家关注我们的微信公众号：ntucap</p>
-    </footer>
-
+    <div class="footer">
+        <p>趣味测试供应商：南洋理工CAP组 <br>
+        欢迎大家关注我们的微信公众号：ntucap</p>
+    </div>
+    <div class="border"></div>
     <% include import.ejs %>
 </body>
 </html>

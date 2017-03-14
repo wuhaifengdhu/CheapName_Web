@@ -15,13 +15,6 @@ module.exports = function (app) {
         count = 1200;
     }
 
-    app.get('/test', function (req, res) {
-        res.render('testweUi', {
-            site_count: count
-        });
-    });
-
-
     app.get('/', function (req, res) {
         res.render('index', {
             site_count: count
