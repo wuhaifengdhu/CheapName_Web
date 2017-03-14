@@ -3,3 +3,6 @@
 .idea/
 views/.DS_Store
 node_modules/
+
+# remove db.json
+db.json
