@@ -101,6 +101,6 @@ html {
     right: -15px;
 }
 
-.form-group, .radio-inline{
-    width: 100%;
+.date-input{
+    background-color: inherit;
 }
