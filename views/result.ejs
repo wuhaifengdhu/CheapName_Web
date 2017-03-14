@@ -9,18 +9,18 @@
     <div class="tab-content">
         <div class="border"></div>
         <div class="result_box">
-            你的名字是<%= cheap_name%>，哈哈哈
+            你的名字是<i style="font-size: xx-large"><%= cheap_name%></i>，哈哈哈
         </div>
 
         <img class="img-box" src="<%= img %>">
 
         <div class="bar"></div>
         <div class="description">
-            <p>个人性格分析：</p>
-            <p><%= description %></p>
+            <p>生肖属性和性格分析: </p>
+            <p style="text-indent: 2em"><%= year%>年出生的宝宝属<%= zodiac %>。<%= description %></p>
         </div>
 
-        <div class="bar"></div>
+        <div class="border"></div>
     </div>
 
     <% include import.ejs %>

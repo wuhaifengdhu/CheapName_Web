@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function getName(gender, month, day){
+            // gender: 0：男、1：女
+            gender = parseInt(gender);
+            var firstNames = [
+                ["长", "栓", "狗", "来", "大", "守", "傻", "福", "龟", "二", "胖", "臭"],
+                ["长", "小", "阿", "来", "大", "守", "傻", "福", "美", "二", "胖", "臭"]
+            ];
+            var secondNames = [
+                ["牛", "羊", "剩", "猴", "球", "坑", "根", "岁", "娃", "毛", "歪", "狮", "英", "鼠", "肥", "狗", "虎", "猫", "鸟",
+                    "腚", "村", "蛋", "军", "木", "马", "熊", "财", "头", "胖", "发"],
+                ["芳", "妮", "乔", "娣", "茶", "坑", "兔", "岁", "娃", "夕", "雯", "姑", "英", "妹", "肥", "霞", "娇", "花", "凤",
+                    "腚", "村", "玲", "妞", "木", "翠", "爱", "宝", "云", "胖", "发"]
+            ];
+            console.log("Method getName called: gender = " + gender + " month=" + month + " day=" + day);
+            return firstNames[gender][month] + secondNames[gender][day];
+        }
+
+        function getImg(name){
+            var dic = {"牛": "niu.jpeg", "羊":"yang.jpg", "狗":"gou.jpg", "猴":"hou.jpg", "球":"qiu.jpg", "狮":"shi.jpg",
+                "花":"hua.jpg", "鸟":"niao.jpeg", "马":"ma.jpeg", "兔":"tu.jpg", "鼠":"shu.jpg", "熊":"xiong.jpeg"};
+            var img_list = ["0.jpg", "1.jpeg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpeg", "9.jpg",
+                "10.jpeg", "11.jpg"];
+
+            var img = dic[name[0]];
+            if(! img){
+                console.log("Can not find:" + name[0]);
+                img = dic[name[1]];
+                if(! img){
+                    img = img_list[Math.floor(Math.random()*12)];
+                    console.log("Finally get img:  " + img);
+                } else {
+                    console.log("Get img from second name:" + name[1]);
+                }
+            } else {
+                console.log("Get img from first name:" + name[0]);
+            }
+            return "img/" + img;
+        }
+
+        function click_method() {
+            var name = getName(0, 2, 16);
+            alert(getImg(name));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alert(click_method())"></button>
+</body>
+</html>

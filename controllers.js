@@ -21,22 +21,28 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/result', function (req, res) {
+        res.redirect('/');
+    });
+
     app.post('/result', function (req, res) {
+        console.log(req.headers);
         console.log(req.body);
-        var user_name = req.body.username;
         var sex = req.body.gender;
         var birthday = req.body.birthday;
         var dateArray = birthday.split('/');
         var year = parseInt(dateArray[2]), month = parseInt(dateArray[0]) - 1, day = parseInt(dateArray[1]) - 1;
-
+        var name = nameUtil.getName(sex, month, day);
+        var img_url = nameUtil.getImg(name);
 
         count += 1;
         console.log("count: " + count);
         localStorage.setItem(key, count);
         res.render('result', {
-            name: user_name,
-            cheap_name: nameUtil.getName(sex, month, day),
-            img: nameUtil.getImg(month),
+            cheap_name: name,
+            img: img_url,
+            year: year,
+            zodiac: nameUtil.getZodiac(year),
             description: nameUtil.getDes(year)
         });
     });
