@@ -6,20 +6,23 @@
     <title>显示名字结果</title>
 </head>
 <body>
-    <div class="border"></div>
-    <div class="result_box">
-        你的名字是<%= cheap_name%>，哈哈哈
+    <div class="tab-content">
+        <div class="border"></div>
+        <div class="result_box">
+            你的名字是<%= cheap_name%>，哈哈哈
+        </div>
+
+        <img class="img-box" src="<%= img %>">
+
+        <div class="bar"></div>
+        <div class="description">
+            <p>个人性格分析：</p>
+            <p><%= description %></p>
+        </div>
+
+        <div class="bar"></div>
     </div>
 
-    <img class="img-box" src="<%= img %>">
-
-    <div class="bar"></div>
-    <div class="description">
-        <p>个人性格分析：</p>
-        <p><%= description %></p>
-    </div>
-
-    <div class="bar"></div>
     <% include import.ejs %>
 </body>
 </html>

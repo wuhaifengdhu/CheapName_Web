@@ -9,13 +9,15 @@ body {
     min-height: 670px;
     max-height: 780px;
     margin: 0 auto;
-    padding: 0 15px;
 }
 
 html {
     background-image: url("../img/bg.jpeg");
 }
 
+.tab-content{
+    padding: 0 15px 0 15px;
+}
 
 .header{
     text-align: center;
