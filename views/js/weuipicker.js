@@ -81,13 +81,10 @@
                 defaultValue: [1990, 6, 15],
                 onChange: function onChange(result) {
                     var birthday = result[0] + "/" + result[1] + "/" + result[2];
-                    console.log(birthday);
-                    document.querySelector('#datePickerBtn').innerHTML = birthday;
                     document.querySelector('#birthday').setAttribute("value", birthday);
                 },
                 onConfirm: function onConfirm(result) {
                     var birthday = result[0] + "/" + result[1] + "/" + result[2];
-                    document.querySelector('#datePickerBtn').innerHTML = birthday;
                     document.querySelector('#birthday').setAttribute("value", birthday);
                 },
                 id: 'datePicker'
