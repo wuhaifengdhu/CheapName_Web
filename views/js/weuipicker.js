@@ -79,7 +79,7 @@
                  *  * * 3                每周三
                  */
                 // cron: '* */2 0',
-                defaultValue: [1990, 1, 1],
+                defaultValue: [1990, 6, 15],
                 onChange: function onChange(result) {
                     console.log(result[0] + ":" + result[1] + ":" + result[2]);
                     document.querySelector('#datePickerBtn').setAttribute("value", result[0] + "/" + result[1] + "/" + result[2]);

@@ -104,19 +104,17 @@ html {
     width: 100%;
 }
 
-.row1, .row2{
-    padding: 3px 10px 3px 10px;
-}
 
 .row1{
     align-items: center;
     justify-content: center;
-    width: 25%;
+    padding: 3px 10px 3px 20px;
 }
 
 .row2 {
     display: flex;
     justify-content: flex-start;
+    padding: 3px 10px 3px 10px;
 }
 
 
@@ -141,7 +139,9 @@ html {
     right: -15px;
 }
 
-.date-input{
-    background-color: inherit;
+.date-input {
     font-size: medium;
+    width: 120px;
+    border: 1px #9b9b9b solid;
+    background-color: inherit;
 }
