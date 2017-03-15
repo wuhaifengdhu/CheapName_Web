@@ -28,8 +28,9 @@ module.exports = function (app) {
     app.post('/result', function (req, res) {
         console.log(nameUtil.getClientIp(req));
         console.log(req.body);
-        var sex = req.body.gender;
-        var birthday = req.body.birthday;
+        var sex = req.body.gender || 0;
+        var birthday = req.body.birthday || "1990/06/15";
+        console.log(birthday);
         var dateArray = birthday.split('/');
         var year = parseInt(dateArray[0]), month = parseInt(dateArray[1]) - 1, day = parseInt(dateArray[2]) - 1;
         var name = nameUtil.getName(sex, month, day);
