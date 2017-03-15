@@ -59,7 +59,6 @@
         // import 'weui';
         _fastclick2.default.attach(document.body);
 
-
         // 时间选择器
         document.querySelector('#datePickerBtn').addEventListener('click', function () {
             _weui2.default.datePicker({
@@ -81,11 +80,15 @@
                 // cron: '* */2 0',
                 defaultValue: [1990, 6, 15],
                 onChange: function onChange(result) {
-                    console.log(result[0] + ":" + result[1] + ":" + result[2]);
-                    document.querySelector('#datePickerBtn').setAttribute("value", result[0] + "/" + result[1] + "/" + result[2]);
+                    var birthday = result[0] + "/" + result[1] + "/" + result[2];
+                    console.log(birthday);
+                    document.querySelector('#datePickerBtn').innerHTML = birthday;
+                    document.querySelector('#birthday').setAttribute("value", birthday);
                 },
                 onConfirm: function onConfirm(result) {
-                    document.querySelector('#datePickerBtn').setAttribute("value", result[0] + "/" + result[1] + "/" + result[2]);
+                    var birthday = result[0] + "/" + result[1] + "/" + result[2];
+                    document.querySelector('#datePickerBtn').innerHTML = birthday;
+                    document.querySelector('#birthday').setAttribute("value", birthday);
                 },
                 id: 'datePicker'
             });

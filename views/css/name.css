@@ -140,8 +140,14 @@ html {
 }
 
 .date-input {
+    text-align: left;
+    color: inherit;
     font-size: medium;
-    width: 120px;
+    width: 150px;
     border: 1px #9b9b9b solid;
     background-color: inherit;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -o-border-radius:3px;
+    -moz-border-radius:3px;
 }
