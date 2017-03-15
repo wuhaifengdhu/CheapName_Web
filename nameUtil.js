@@ -34,6 +34,7 @@ module.exports = (function () {
             console.log("Can not find:" + name[0]);
             img = dic[name[1]];
             if(! img){
+                console.log("Can not find:" + name[1]);
                 img = img_list[Math.floor(Math.random()*12)];
                 console.log("Finally get img:  " + img);
             } else {
@@ -71,10 +72,18 @@ module.exports = (function () {
         alert(getDes(year));
     }
 
+    function getClientIp(req) {
+        return req.headers['x-forwarded-for'] ||
+            req.connection.remoteAddress ||
+            req.socket.remoteAddress ||
+            req.connection.socket.remoteAddress;
+    };
+
     return {
         getName: getName,
         getImg: getImg,
         getDes: getDes,
-        getZodiac: getZodiac
+        getZodiac: getZodiac,
+        getClientIp: getClientIp
     };
 })();

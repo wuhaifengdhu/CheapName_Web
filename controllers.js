@@ -26,7 +26,7 @@ module.exports = function (app) {
     });
 
     app.post('/result', function (req, res) {
-        console.log(req.headers);
+        console.log(nameUtil.getClientIp(req));
         console.log(req.body);
         var sex = req.body.gender;
         var birthday = req.body.birthday;
