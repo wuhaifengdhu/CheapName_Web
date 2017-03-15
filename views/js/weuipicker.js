@@ -78,7 +78,7 @@
                  *  * * 3                每周三
                  */
                 // cron: '* */2 0',
-                defaultValue: [1990, 6, 15],
+                defaultValue: [1990, 6, 16],
                 onChange: function onChange(result) {
                     var birthday = result[0] + "/" + result[1] + "/" + result[2];
                     document.querySelector('#birthday').setAttribute("value", birthday);

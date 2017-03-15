@@ -29,7 +29,7 @@ module.exports = function (app) {
         console.log(nameUtil.getClientIp(req));
         console.log(req.body);
         var sex = req.body.gender || 0;
-        var birthday = req.body.birthday || "1990/06/15";
+        var birthday = req.body.birthday || "1990/06/16";
         console.log(birthday);
         var dateArray = birthday.split('/');
         var year = parseInt(dateArray[0]), month = parseInt(dateArray[1]) - 1, day = parseInt(dateArray[2]) - 1;
