@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/name.css">
     <title>基于大数据分析的贱名诠释</title>
 </head>
 <body ontouchstart>
@@ -50,8 +56,9 @@
 
                     <div class="form-group">
                         <label class="col-xs-4 control-label">您的生日</label>
-                        <div class="col-xs-4 date">
-                            <input type="text" id="datepicker" class="date-input" name="birthday">
+                        <div class="col-xs-4">
+                            <input type="text" id="datePickerBtn" class="date-input" name="birthday">
+                            <!--<a href="javascript:;" id="datePickerBtn" class="weui-btn weui-btn_default date-input" >DatePicker</a>-->
                         </div>
                     </div>
                 </div>
@@ -73,5 +80,6 @@
         <div class="border"></div>
     </div>
     <% include import.ejs %>
+    <script type="text/javascript" src="js/weuipicker.js"></script>
 </body>
 </html>

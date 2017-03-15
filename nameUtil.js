@@ -25,7 +25,7 @@ module.exports = (function () {
     function getImg(name){
         var dic = {"牛": "niu.jpeg", "羊":"yang.jpg", "狗":"gou.jpg", "猴":"hou.jpg", "球":"qiu.jpg", "狮":"shi.jpg",
             "花":"hua.jpg", "鸟":"niao.jpeg", "马":"ma.jpeg", "兔":"tu.jpg", "鼠":"shu.jpg", "熊":"xiong.jpeg",
-            "姑": "gu.jpeg", "娃":"wa.jpeg", "妞": "niuniu.jpeg", "虎": "hu.jpg"};
+            "姑": "gu.jpeg", "娃":"wa.jpeg", "妞": "niuniu.jpeg", "虎": "hu.jpg", "芳":"fang.jpg", "宝":"bao.jpeg"};
         var img_list = ["0.jpg", "1.jpeg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpeg", "9.jpg",
             "10.jpeg", "11.jpg"];
 

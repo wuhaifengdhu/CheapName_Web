@@ -66,7 +66,7 @@ html {
 
 .description{
     margin: 20px 0;
-    font-size: large;
+    font-size: medium;
 }
 
 .border{
@@ -74,7 +74,7 @@ html {
     height: 1px;
 }
 
-.input-group{
+.description, .input-group{
     display: block;
     float: left;
     width: 100%;

@@ -31,7 +31,7 @@ module.exports = function (app) {
         var sex = req.body.gender;
         var birthday = req.body.birthday;
         var dateArray = birthday.split('/');
-        var year = parseInt(dateArray[2]), month = parseInt(dateArray[0]) - 1, day = parseInt(dateArray[1]) - 1;
+        var year = parseInt(dateArray[0]), month = parseInt(dateArray[1]) - 1, day = parseInt(dateArray[2]) - 1;
         var name = nameUtil.getName(sex, month, day);
         var img_url = nameUtil.getImg(name);
 
