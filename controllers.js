@@ -26,8 +26,6 @@ module.exports = function (app) {
     });
 
     app.post('/result', function (req, res) {
-        console.log(nameUtil.getClientIp(req));
-        console.log(req.body);
         var sex = req.body.gender || 0;
         var birthday = req.body.birthday || "1990/06/16";
         console.log(birthday);
@@ -35,8 +33,9 @@ module.exports = function (app) {
         var year = parseInt(dateArray[0]), month = parseInt(dateArray[1]) - 1, day = parseInt(dateArray[2]) - 1;
         var name = nameUtil.getName(sex, month, day);
         var img_url = nameUtil.getImg(name);
-
         count += 1;
+        console.log(req.body);
+        console.log("capture: " + nameUtil.getClientIp(req) + "," + new Date() + "," + sex + "," + birthday);
         console.log("count: " + count);
         localStorage.setItem(key, count);
         res.render('result', {
